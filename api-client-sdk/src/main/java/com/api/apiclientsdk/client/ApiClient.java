@@ -37,14 +37,6 @@ public class ApiClient {
         this.secretKey = secretKey;
     }
 
-    public String getNameBtGet(String name) {
-        HashMap<String, Object> paramMap = new HashMap<>();
-        paramMap.put("name", name);
-        String result = HttpUtil.get(GATEWAY_HOST + "/api/name/", paramMap);
-        System.out.println(result);
-        return result;
-    }
-
     private Map<String, String> getHeaderMap(String body) {
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("accessKey", accessKey);
@@ -55,19 +47,6 @@ public class ApiClient {
         hashMap.put("timestamp", String.valueOf(System.currentTimeMillis() / 1000));
         hashMap.put("sign", getSign(body, secretKey));
         return hashMap;
-    }
-
-    public String getUserNameByPost(User user) {
-        String json = JSONUtil.toJsonStr(user);
-        HttpResponse response = HttpRequest.post(GATEWAY_HOST + "/api/interfaceInvoke/invoke/user")
-                .charset(StandardCharsets.UTF_8)
-                .addHeaders(getHeaderMap(json))
-                .body(json)
-                .execute();
-        System.out.println(response.getStatus());
-        String result = response.body();
-        System.out.println(result);
-        return result;
     }
 
 
