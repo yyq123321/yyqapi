@@ -1,0 +1,32 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: my-route
+          uri: lb://api-interface
+          predicates:
+            - Path=/api/interfaceInvoke/** #根据请求路径进行路由
+    nacos:
+      discovery:
+        server-addr: #
+        ip: #
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+dubbo:
+  application:
+    name: dubbo-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-register
+    address: #
+

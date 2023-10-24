@@ -1,0 +1,12 @@
+server:
+  port: 8123
+  servlet:
+    context-path: /api/interfaceInvoke
+spring:
+  application:
+    name: api-interface
+  cloud:
+    nacos:
+      discovery:
+        server-addr: #
+        ip: #

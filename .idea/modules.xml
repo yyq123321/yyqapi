@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/api-client-sdk/api-client-sdk.iml" filepath="$PROJECT_DIR$/api-client-sdk/api-client-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-common/api-common.iml" filepath="$PROJECT_DIR$/api-common/api-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-global-gateway/api-gateway (1).iml" filepath="$PROJECT_DIR$/api-global-gateway/api-gateway (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-global-gateway/api-global-gateway.iml" filepath="$PROJECT_DIR$/api-global-gateway/api-global-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-interface/api-interface.iml" filepath="$PROJECT_DIR$/api-interface/api-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-order/api-order.iml" filepath="$PROJECT_DIR$/api-order/api-order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/api-platform-project.iml" filepath="$PROJECT_DIR$/.idea/api-platform-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api/api-service.iml" filepath="$PROJECT_DIR$/api/api-service.iml" />
+    </modules>
+  </component>
+</project>

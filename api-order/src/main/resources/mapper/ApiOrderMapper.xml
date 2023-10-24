@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.api.apiorder.mapper.OrderMapper">
+
+    <resultMap id="BaseResultMap" type="com.api.apicommon.model.entity.Order">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="userId" column="userId" jdbcType="BIGINT"/>
+            <result property="payAmount" column="payAmount" jdbcType="DECIMAL"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="orderSn" column="orderSn" jdbcType="VARCHAR"/>
+            <result property="codeUrl" column="codeUrl" jdbcType="VARCHAR"/>
+            <result property="addCoins" column="addCoins" jdbcType="INTEGER"/>
+            <result property="payType" column="payType" jdbcType="TINYINT"/>
+            <result property="productId" column="productId" jdbcType="BIGINT"/>
+            <result property="status" column="status" jdbcType="TINYINT"/>
+            <result property="formData" column="formData" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,userId,payAmount,
+        isDelete,createTime,updateTime,
+        orderSn,codeUrl,addCoins,
+        payType,productId,status,
+        formData
+    </sql>
+</mapper>

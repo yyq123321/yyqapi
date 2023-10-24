@@ -1,0 +1,60 @@
+server:
+  port: 8091
+  servlet:
+    # cookie 30 天过期
+    session:
+      cookie:
+        max-age: 2592000
+spring:
+  application:
+    name: api-global-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: #
+        ip: #
+    gateway:
+      routes:
+        - id: api_order_route
+          uri: lb://api-order
+          predicates:
+            - Path=/api/order/**
+
+        - id: api_interface_invoke
+          uri: lb://api-gateway
+          predicates:
+            - Path=/api/interfaceInvoke/**
+            
+        - id: api_backend_route
+          uri: lb://api-service
+          predicates:
+            - Path=/api/**
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin, RETAIN_UNIQUE
+      globalcors: # 全局的跨域配置
+        add-to-simple-url-handler-mapping: true # 解决options请求被拦截问题
+        # options请求 就是一种询问服务器是否浏览器可以跨域的请求
+        # 如果每次跨域都有询问服务器是否浏览器可以跨域对性能也是损耗
+        # 可以配置本次跨域检测的有效期maxAge
+        # 在maxAge设置的时间范围内，不去询问，统统允许跨域
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: # 允许哪些网站的跨域请求
+              - "#"
+            allowedMethods: # 允许的跨域ajax的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+            allowedHeaders: "*"    # 允许在请求中携带的头信息
+            allowCredentials: true    # 允许在请求中携带cookie
+            maxAge: 360000            # 本次跨域检测的有效期(单位毫秒)
+            # 有效期内，跨域请求不会一直发option请求去增大服务器压力
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+

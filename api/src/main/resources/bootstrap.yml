@@ -1,0 +1,11 @@
+spring:
+  application:
+    name:
+  profiles:
+#    active: dev
+    active:
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        file-extension: yaml

@@ -1,0 +1,2 @@
+#spirng boot starter
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.api.apiclientsdk.ApiClientConfig

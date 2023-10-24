@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="api-order" />
+        <module name="api-service" />
+        <module name="api-gateway (1)" />
+        <module name="api-gateway" />
+        <module name="api-global-gateway" />
+        <module name="api-common" />
+        <module name="api-client-sdk" />
+        <module name="api-interface" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-client-sdk" target="1.8" />
+      <module name="api-common" target="1.8" />
+      <module name="api-gateway" target="1.8" />
+      <module name="api-gateway (1)" target="1.8" />
+      <module name="api-global-gateway" target="1.8" />
+      <module name="api-interface" target="1.8" />
+      <module name="api-order" target="1.8" />
+      <module name="api-platform" target="1.8" />
+      <module name="api-platform-project" target="1.5" />
+      <module name="api-service" target="1.8" />
+      <module name="api-third-party" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-client-sdk" options="-parameters" />
+      <module name="api-common" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="api-gateway (1)" options="-parameters" />
+      <module name="api-global-gateway" options="-parameters" />
+      <module name="api-interface" options="-parameters" />
+      <module name="api-order" options="-parameters" />
+      <module name="api-platform" options="-parameters" />
+      <module name="api-platform-project" options="" />
+      <module name="api-service" options="-parameters" />
+      <module name="api-third-party" options="-parameters" />
+    </option>
+  </component>
+</project>

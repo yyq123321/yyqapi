@@ -1,0 +1,5 @@
+#Dubbo cache
+#Tue Oct 10 10:51:57 CST 2023
+com.api.apicommon.service.InnerProductInfoService=["dubbo-provider"]
+com.api.apicommon.service.InnerUserService=["dubbo-provider"]
+com.api.apicommon.service.ApiBackendService=["dubbo-provider"]
